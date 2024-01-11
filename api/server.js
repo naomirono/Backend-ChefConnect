@@ -46,6 +46,11 @@ const connect = async () => {
   }
 };
 
+app.get("/", (req, res) => {
+  res.send("Welcome to Chef Connect!");
+});
+
+
 app.listen(PORT, () => {
   console.log(`Server listening on ${PORT}`);
   connect();
