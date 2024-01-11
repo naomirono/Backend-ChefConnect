@@ -11,6 +11,10 @@ const {
 const { fileUpload } = require("../utils/fileUpload");
 const protect = require("../middlewares/authMiddleware");
 
+router.get("/", (req, res) => {
+  res.send("Welcome to Chef Connect!"); // or any other desired response
+});
+
 router.post("/register", fileUpload.single("file"), registerUser);
 router.post("/login", login);
 router.post("/logout", logout);
